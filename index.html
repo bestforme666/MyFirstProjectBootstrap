@@ -1,14 +1,185 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Основи Mikrotik</title>
+		<title>Tutorial Mikrotik</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet"  href="css/style.css">
+		<link rel="stylesheet"  href="css/animate.css">
 	</head>
 	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#1c1c1c">
+			<a class="navbar-brand" href="https://mikrotik.com/">
+				<img src="img/white_logo.svg" class="logo animated bounceInLeft">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Tutorials</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Pricing
+						</a>
+						<div class="dropdown-menu bg-pricing" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">
+								<img class="img-pricing" src="img/hEXlite.png">
+								<div class="text-pricing">
+									<h6>hEX lite $39.95</h6>
+									<p>5x Ethernet, Small plastic case, 850MHz CPU, 64MB RAM, Most affordable MPLS router, RouterOS L4</p>
+								</div>
+							</a>
+							<hr>
+							<a class="dropdown-item" href="#">
+								<img class="img-pricing" src="img/hEX.png">
+								<div class="text-pricing">
+									<h6>hEX $59.95</h6>
+									<p>5x Gigabit Ethernet, Dual Core 880MHz CPU, 256MB RAM, USB, microSD, RouterOS L4</p>
+								</div>
+							</a>
+							<hr>
+							<a class="dropdown-item" href="#">
+								<img class="img-pricing" src="img/hEXPoE.png">
+								<div class="text-pricing">
+									<h6>hEX PoE lite $59.95</h6>
+									<p>5xEthernet with PoE output for four ports, USB, 650MHz CPU, 64MB RAM, RouterOS L4</p>
+								</div>
+							</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="#">About Us</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<br>
+		<hr>
+		<div class="container">
+			<h4 class="text-center">This is a short how to explaining how to set up a full-NAT on a Mikrotik RouterOS:</h4>
+		</div>
+		<hr>
+		<br>
+		<div class="container">
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img class="d-block w-50 center" src="img/img_carousel/Mikrotik_nat_howto01.jpg" alt="First step">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-50 center" src="img/img_carousel/Mikrotik_nat_howto02.jpg" alt="Second step">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-50 center" src="img/img_carousel/Mikrotik_nat_howto03.jpg" alt="Third step">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-50 center" src="img/img_carousel/Mikrotik_nat_howto04.jpg" alt="Fourth step">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-50 center" src="img/img_carousel/Mikrotik_nat_howto05.jpg" alt="Fifth step">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-50 center" src="img/img_carousel/Mikrotik_nat_howto06.jpg" alt="Sixth step">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-50 center" src="img/img_carousel/Mikrotik_nat_howto07.jpg" alt="Seventh step">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-50 center" src="img/img_carousel/Mikrotik_nat_howto08.jpg" alt="Eighth step">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-50 center" src="img/img_carousel/Mikrotik_nat_howto09.jpg" alt="Ninth step">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-50 center" src="img/img_carousel/Mikrotik_nat_howto10.jpg" alt="Tenth step">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-50 center" src="img/img_carousel/Mikrotik_nat_howto11.jpg" alt="Eleventh step">
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="container">
+			<div class="container">
+				<hr>
+				<h4 class="text-center">Winbox</h4>
+				<hr>
+			</div>
+			<br>
+			<div class="d-flex justify-content-between">
+				<img src="img/img_tutorials/Winbox-loader2.png" class="pull-left gap-right animated bounceInLeft col-8">
+				<p class="animated bounceInRight col-4">Winbox is a configuration utility that can connect to the router via MAC or IP protocol. Latest winbox version can be downloaded from our download page.
+				Run the Winbox utility, then click the [...] button and see if Winbox finds your Router and it's MAC address. Winbox neighbor discovery will discover all routers on the broadcast network. If you see routers on the list, connect to it by clicking on MAC address and pressing Connect button.</p>
+			</div>
+			<br>
+			<div class="container">
+				<p>If winbox cannot find any routers, make sure that your Windows computer is directly connected to the router with an Ethernet cable, or at least they both are connected to the same switch. As MAC connection works on Layer2, it is possible to connect to the router even without IP address configuration. Due to the use of broadcasting MAC connection is not stable enough to use continuously, therefore it is not wise to use it on a real production / live network!. MAC connection should be used only for initial configuration.</p>
+			</div>
+			<br>
+			<div class="d-flex justify-content-between">
+				<p class="animated bounceInLeft col-3">Winbox is a configuration utility that can connect to the router via MAC or IP protocol. Latest winbox version can be downloaded from our download page.
+				Run the Winbox utility, then click the [...] button and see if Winbox finds your Router and it's MAC address. Winbox neighbor discovery will discover all routers on the broadcast network. If you see routers on the list, connect to it by clicking on MAC address and pressing Connect button.</p>
+				<img src="img/img_tutorials/Winbox-workarea.png" class="pull-right gap-left animated bounceInRight col-9">
+			</div>
+			<br>
+			<br>
+			<hr>
+			<div class="container">
+				<h4 class="text-center">QuickSet and WebFig</h4>
+			</div>
+			<hr>
+			<div class="container">
+				<p>If you have a router with default configuration, the IP address of the router can be used to connect to the Web interface. The first screen to come up will be QuickSet, where you can set the password and basic settings to secure your device. For more advanced settings, click the WebFig button to open the Advanced mode, which has almost the same configuration functionality as Winbox.</p>
+				<img class="center" src="img/img_tutorials/797px-Quickset.jpg">
+			</div>
+		</div>
+		<br>
+		<div class="footer center">
+      <div class="container">
+              <a href='#'><i class="fa fa-twitch fa-3x fa-fw"></i></a>
+              <a href='#'><i class="fa fa-facebook fa-3x fa-fw"></i></a>
+              <a href='#'><i class="fa fa-twitter fa-3x fa-fw"></i></a>
+              <a href='#'><i class="fa fa-youtube-play fa-3x fa-fw"></i></a>
+              <a href='#'><i class="fa fa-rss fa-3x fa-fw"></i></a>
+              <a href='#'><i class="fa fa-vine fa-3x fa-fw"></i></a>
+              <a href='#'><i class="fa fa-flickr fa-3x fa-fw"></i></a>
+              <a href='#'><i class="fa fa-linkedin fa-3x fa-fw"></i></a>
+            </span>
+      </div>
+    </div>
+                  
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+		<script src="https://use.fontawesome.com/1caddad574.js"></script>
 	</body>
 </html>
